@@ -40,7 +40,7 @@ class TestStockQuantManualAssign(TransactionCase):
             {
                 "product_id": cls.product.id,
                 "product_uom_qty": 400.0,
-                "product_uom": cls.product.uom_id.id,
+                "uom_id": cls.product.uom_id.id,
                 "location_id": cls.location_src.id,
                 "location_dest_id": cls.location_dst.id,
                 "picking_id": cls.picking.id,

@@ -1,9 +1,9 @@
 
-[![Runboat](https://img.shields.io/badge/runboat-Try%20me-875A7B.png)](https://runboat.odoo-community.org/builds?repo=OCA/stock-logistics-reservation&target_branch=19.0)
-[![Pre-commit Status](https://github.com/OCA/stock-logistics-reservation/actions/workflows/pre-commit.yml/badge.svg?branch=19.0)](https://github.com/OCA/stock-logistics-reservation/actions/workflows/pre-commit.yml?query=branch%3A19.0)
-[![Build Status](https://github.com/OCA/stock-logistics-reservation/actions/workflows/test.yml/badge.svg?branch=19.0)](https://github.com/OCA/stock-logistics-reservation/actions/workflows/test.yml?query=branch%3A19.0)
-[![codecov](https://codecov.io/gh/OCA/stock-logistics-reservation/branch/19.0/graph/badge.svg)](https://codecov.io/gh/OCA/stock-logistics-reservation)
-[![Translation Status](https://translation.odoo-community.org/widgets/stock-logistics-reservation-19-0/-/svg-badge.svg)](https://translation.odoo-community.org/engage/stock-logistics-reservation-19-0/?utm_source=widget)
+[![Runboat](https://img.shields.io/badge/runboat-Try%20me-875A7B.png)](https://runboat.odoo-community.org/builds?repo=OCA/stock-logistics-reservation&target_branch=20.0)
+[![Pre-commit Status](https://github.com/OCA/stock-logistics-reservation/actions/workflows/pre-commit.yml/badge.svg?branch=20.0)](https://github.com/OCA/stock-logistics-reservation/actions/workflows/pre-commit.yml?query=branch%3A20.0)
+[![Build Status](https://github.com/OCA/stock-logistics-reservation/actions/workflows/test.yml/badge.svg?branch=20.0)](https://github.com/OCA/stock-logistics-reservation/actions/workflows/test.yml?query=branch%3A20.0)
+[![codecov](https://codecov.io/gh/OCA/stock-logistics-reservation/branch/20.0/graph/badge.svg)](https://codecov.io/gh/OCA/stock-logistics-reservation)
+[![Translation Status](https://translation.odoo-community.org/widgets/stock-logistics-reservation-20-0/-/svg-badge.svg)](https://translation.odoo-community.org/engage/stock-logistics-reservation-20-0/?utm_source=widget)
 
 <!-- /!\ do not modify above this line -->
 
@@ -13,7 +13,7 @@ Enhance the way products are allocated (virtual reservation) and reserved (rules
 
 Are you looking for modules related to logistics? Or would like to contribute
 to? There are many repositories with specific purposes. Have a look at this
-[README](https://github.com/OCA/wms/blob/19.0/README.md).
+[README](https://github.com/OCA/wms/blob/20.0/README.md).
 
 <!-- /!\ do not modify below this line -->
 
@@ -25,7 +25,7 @@ Available addons
 ----------------
 addon | version | maintainers | summary
 --- | --- | --- | ---
-[stock_quant_manual_assign](stock_quant_manual_assign/) | 19.0.1.0.1 |  | Stock - Manual Quant Assignment
+[stock_quant_manual_assign](stock_quant_manual_assign/) | 20.0.1.0.1 |  | Stock - Manual Quant Assignment
 
 [//]: # (end addons)
 

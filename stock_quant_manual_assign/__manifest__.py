@@ -7,7 +7,7 @@
 
 {
     "name": "Stock - Manual Quant Assignment",
-    "version": "19.0.1.0.1",
+    "version": "20.0.1.0.1",
     "category": "Reservation",
     "license": "AGPL-3",
     "author": "AvanzOSC, "
@@ -20,7 +20,7 @@
     "data": [
         "wizard/assign_manual_quants_view.xml",
         "views/stock_move_view.xml",
-        "security/ir.model.access.csv",
+        "security/ir.access.csv",
     ],
     "installable": True,
 }

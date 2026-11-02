@@ -17,7 +17,7 @@ class AssignManualQuants(models.TransientModel):
     @api.constrains("quants_lines")
     def _check_qty(self):
         precision_digits = self.env["decimal.precision"].precision_get(
-            "Product Unit of Measure"
+            "Product Unit"
         )
         for record in self.filtered("quants_lines"):
             if (
@@ -43,12 +43,12 @@ class AssignManualQuants(models.TransientModel):
     lines_qty = fields.Float(
         string="Reserved qty",
         compute="_compute_qties",
-        digits="Product Unit of Measure",
+        digits="Product Unit",
     )
     move_qty = fields.Float(
         string="Remaining qty",
         compute="_compute_qties",
-        digits="Product Unit of Measure",
+        digits="Product Unit",
     )
     quants_lines = fields.One2many(
         comodel_name="assign.manual.quants.lines",
@@ -207,18 +207,18 @@ class AssignManualQuantsLines(models.TransientModel):
     # This is not correctly shown as related or computed, so we make it regular
     on_hand = fields.Float(
         readonly=True,
-        digits="Product Unit of Measure",
+        digits="Product Unit",
     )
     reserved = fields.Float(
-        string="Others Reserved", digits="Product Unit of Measure", readonly=True
+        string="Others Reserved", digits="Product Unit", readonly=True
     )
     selected = fields.Boolean(string="Select")
-    qty = fields.Float(string="QTY", digits="Product Unit of Measure")
+    qty = fields.Float(string="QTY", digits="Product Unit")
 
     @api.onchange("selected")
     def _onchange_selected(self):
         precision = self.env["decimal.precision"].precision_get(
-            "Product Unit of Measure"
+            "Product Unit"
         )
         if not self.selected:
             self.qty = 0
@@ -235,7 +235,7 @@ class AssignManualQuantsLines(models.TransientModel):
     @api.constrains("qty")
     def _check_qty(self):
         precision_digits = self.env["decimal.precision"].precision_get(
-            "Product Unit of Measure"
+            "Product Unit"
         )
         for record in self.filtered("qty"):
             quant = record.quant_id
@@ -268,7 +268,7 @@ class AssignManualQuantsLines(models.TransientModel):
         self.ensure_one()
         quant = self.env["stock.quant"]
         precision_digits = self.env["decimal.precision"].precision_get(
-            "Product Unit of Measure"
+            "Product Unit"
         )
         move = self.assign_wizard.move_id
         if float_compare(self.qty, 0.0, precision_digits=precision_digits) > 0:
