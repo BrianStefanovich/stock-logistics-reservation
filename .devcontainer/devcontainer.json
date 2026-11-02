@@ -1,0 +1,25 @@
+{
+  "name": "Odoo 20 Development",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "odoo",
+  "workspaceFolder": "/workspace/odoo-develop-environment",
+  "shutdownAction": "stopCompose",
+  "overrideCommand": true,
+  "remoteUser": "root",
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash",
+        "terminal.integrated.profiles.linux": {
+          "bash": {
+            "path": "/bin/bash"
+          }
+        }
+      }
+    }
+  },
+  "features": {
+    "ghcr.io/devcontainers/features/git:1": {},
+    "ghcr.io/devcontainers-extra/features/uv:1": {},
+  }
+}
