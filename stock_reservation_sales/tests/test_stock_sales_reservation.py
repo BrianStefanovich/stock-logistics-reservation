@@ -181,6 +181,18 @@ class TestStockSalesReservation(TransactionCase):
         self.assertNotIn(menu_overview.id, visible_ids)
         self.assertNotIn(config.id, visible_ids)
 
+    def test_inventory_manager_can_create(self):
+        manager = self.env["res.users"].create(
+            {
+                "name": "Inventory manager",
+                "login": "inv_manager_reservation",
+                "group_ids": [(6, 0, [self.env.ref("stock.group_stock_manager").id])],
+            }
+        )
+        reservation = self._create_reservation(user=manager)
+        reservation.action_reserve()
+        self.assertEqual(reservation.state, "reserved")
+
     def test_form_defaults(self):
         with Form(self.env["stock.sales.reservation"]) as form:
             form.product_id = self.product

@@ -27,4 +27,12 @@
             name="comment"
         >Can see and manage the reservations of every salesperson.</field>
     </record>
+
+    <!-- Inventory administrators manage every reservation. -->
+    <record id="stock.group_stock_manager" model="res.groups">
+        <field
+            name="implied_ids"
+            eval="[(4, ref('stock_reservation_sales.group_sales_reservation_manager'))]"
+        />
+    </record>
 </odoo>
