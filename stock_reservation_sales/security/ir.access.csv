@@ -1,0 +1,5 @@
+id,name,model_id,group_id/id,operation,domain
+access_stock_sales_reservation_user,stock.sales.reservation own,stock.sales.reservation,stock_reservation_sales.group_sales_reservation_user,crud,"[('user_id', '=', user.id)]"
+access_stock_sales_reservation_manager,stock.sales.reservation manager,stock.sales.reservation,stock_reservation_sales.group_sales_reservation_manager,crud,
+access_stock_sales_reservation_stock_user,stock.sales.reservation stock user,stock.sales.reservation,stock.group_stock_user,r,
+stock_sales_reservation_comp_rule,stock.sales.reservation multi-company,stock.sales.reservation,,crud,"[('company_id', 'in', company_ids)]"

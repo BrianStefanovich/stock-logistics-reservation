@@ -3,6 +3,7 @@ name = "odoo-addons-oca-stock-logistics-reservation"
 version = "20.0.20261102.0"
 dependencies = [
     "odoo-addon-stock_quant_manual_assign==20.0.*",
+    "odoo-addon-stock_reservation_sales==20.0.*",
 ]
 classifiers=[
     "Programming Language :: Python",

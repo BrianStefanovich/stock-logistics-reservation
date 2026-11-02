@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo noupdate="1">
+    <record id="seq_stock_sales_reservation" model="ir.sequence">
+        <field name="name">Sales Stock Reservation</field>
+        <field name="code">stock.sales.reservation</field>
+        <field name="prefix">RSV/</field>
+        <field name="padding">5</field>
+        <field name="company_id" eval="False" />
+    </record>
+</odoo>

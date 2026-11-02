@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record model="res.groups.privilege" id="res_groups_privilege_sales_reservation">
+        <field name="name">Sales Stock Reservations</field>
+        <field name="category_id" ref="base.module_category_sales" />
+    </record>
+
+    <record id="group_sales_reservation_user" model="res.groups">
+        <field name="name">User: Own Reservations</field>
+        <field name="sequence">10</field>
+        <field name="privilege_id" ref="res_groups_privilege_sales_reservation" />
+        <field name="implied_ids" eval="[(4, ref('base.group_user'))]" />
+        <field
+            name="comment"
+        >Can reserve stock without a sales order and manage their own reservations.</field>
+    </record>
+
+    <record id="group_sales_reservation_manager" model="res.groups">
+        <field name="name">Administrator</field>
+        <field name="sequence">20</field>
+        <field name="privilege_id" ref="res_groups_privilege_sales_reservation" />
+        <field
+            name="implied_ids"
+            eval="[(4, ref('group_sales_reservation_user'))]"
+        />
+        <field
+            name="comment"
+        >Can see and manage the reservations of every salesperson.</field>
+    </record>
+</odoo>
