@@ -139,6 +139,33 @@ class TestStockSalesReservation(TransactionCase):
         self.assertIn(mine, visible)
         self.assertNotIn(theirs, visible)
 
+    def test_manager_sees_all_and_reassigns(self):
+        manager_group = self.env.ref(
+            "stock_reservation_sales.group_sales_reservation_manager"
+        )
+        manager = self.env["res.users"].create(
+            {
+                "name": "Reservation manager",
+                "login": "manager_reservation",
+                "group_ids": [(6, 0, [manager_group.id])],
+            }
+        )
+        r1 = self._create_reservation(qty=1.0, user=self.seller)
+        r2 = self._create_reservation(qty=2.0, user=self.seller2)
+        (r1 | r2).sudo().action_reserve()
+        as_manager = self.env["stock.sales.reservation"].with_user(manager)
+        reserved = as_manager.search([("state", "=", "reserved")])
+        self.assertEqual(reserved & (r1 | r2), r1 | r2)
+        grouped = as_manager._read_group(
+            [("state", "=", "reserved")], ["user_id"], ["product_qty:sum"]
+        )
+        self.assertEqual(
+            {user.id: qty for user, qty in grouped},
+            {self.seller.id: 1.0, self.seller2.id: 2.0},
+        )
+        r1.with_user(manager).user_id = self.seller2
+        self.assertEqual(r1.user_id, self.seller2)
+
     def test_form_defaults(self):
         with Form(self.env["stock.sales.reservation"]) as form:
             form.product_id = self.product

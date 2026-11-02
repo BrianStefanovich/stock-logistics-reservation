@@ -68,7 +68,16 @@
                             <field name="partner_id" readonly="state in ('expired', 'cancelled', 'done')" />
                         </group>
                         <group>
-                            <field name="user_id" readonly="state != 'draft'" />
+                            <field
+                                name="user_id"
+                                readonly="state != 'draft'"
+                                groups="!stock_reservation_sales.group_sales_reservation_manager"
+                            />
+                            <field
+                                name="user_id"
+                                readonly="state in ('expired', 'cancelled', 'done')"
+                                groups="stock_reservation_sales.group_sales_reservation_manager"
+                            />
                             <field name="warehouse_id" readonly="state != 'draft'" />
                             <field
                                 name="expiry_duration"
@@ -126,12 +135,51 @@
         <field name="context">{'search_default_my_reservations': 1}</field>
     </record>
 
+    <record id="stock_sales_reservation_view_pivot" model="ir.ui.view">
+        <field name="name">stock.sales.reservation.pivot</field>
+        <field name="model">stock.sales.reservation</field>
+        <field name="arch" type="xml">
+            <pivot>
+                <field name="user_id" type="row" />
+                <field name="product_id" type="row" />
+                <field name="state" type="col" />
+                <field name="product_qty" type="measure" />
+            </pivot>
+        </field>
+    </record>
+
+    <record id="stock_sales_reservation_overview_action" model="ir.actions.act_window">
+        <field name="name">Reserved Stock by Salesperson</field>
+        <field name="res_model">stock.sales.reservation</field>
+        <field name="view_mode">list,pivot,form</field>
+        <field name="search_view_id" ref="stock_sales_reservation_view_search" />
+        <field
+            name="context"
+        >{'search_default_reserved': 1, 'search_default_group_user': 1, 'search_default_group_product': 1}</field>
+    </record>
+
     <menuitem
         id="stock_sales_reservation_menu_root"
         name="Stock Reservations"
-        action="stock_sales_reservation_action"
         sequence="45"
         groups="group_sales_reservation_user,stock.group_stock_user"
         web_icon="stock,static/description/icon.png"
+    />
+
+    <menuitem
+        id="stock_sales_reservation_menu_list"
+        name="Reservations"
+        parent="stock_sales_reservation_menu_root"
+        action="stock_sales_reservation_action"
+        sequence="10"
+    />
+
+    <menuitem
+        id="stock_sales_reservation_menu_overview"
+        name="Reserved Stock by Salesperson"
+        parent="stock_sales_reservation_menu_root"
+        action="stock_sales_reservation_overview_action"
+        sequence="20"
+        groups="group_sales_reservation_manager,stock.group_stock_user"
     />
 </odoo>
