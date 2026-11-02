@@ -7,4 +7,6 @@ Reservations always expire: the salesperson picks the duration in a dropdown
 stock once the date has passed.
 
 Salespeople only need the group *Sales Stock Reservations: User: Own
-Reservations*; they do not need any Inventory access rights.
+Reservations*; they do not need any other Inventory access rights. The module
+makes the *Inventory* app visible to them. Besides *Operations > Sales
+Reservations* they will see the read-only *Overview* and *Products* entries.

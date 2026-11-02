@@ -158,28 +158,26 @@
         >{'search_default_reserved': 1, 'search_default_group_user': 1, 'search_default_group_product': 1}</field>
     </record>
 
-    <menuitem
-        id="stock_sales_reservation_menu_root"
-        name="Stock Reservations"
-        sequence="45"
-        groups="group_sales_reservation_user,stock.group_stock_user"
-        web_icon="stock,static/description/icon.png"
-    />
+    <!-- Let salespeople reach the Inventory app; only their entries are visible. -->
+    <record id="stock.menu_stock_root" model="ir.ui.menu">
+        <field name="group_ids" eval="[(4, ref('group_sales_reservation_user'))]" />
+    </record>
 
     <menuitem
         id="stock_sales_reservation_menu_list"
-        name="Reservations"
-        parent="stock_sales_reservation_menu_root"
+        name="Sales Reservations"
+        parent="stock.menu_stock_warehouse_mgmt"
         action="stock_sales_reservation_action"
-        sequence="10"
+        sequence="5"
+        groups="group_sales_reservation_user,stock.group_stock_user"
     />
 
     <menuitem
         id="stock_sales_reservation_menu_overview"
         name="Reserved Stock by Salesperson"
-        parent="stock_sales_reservation_menu_root"
+        parent="stock.menu_stock_warehouse_mgmt"
         action="stock_sales_reservation_overview_action"
-        sequence="20"
+        sequence="6"
         groups="group_sales_reservation_manager,stock.group_stock_user"
     />
 </odoo>

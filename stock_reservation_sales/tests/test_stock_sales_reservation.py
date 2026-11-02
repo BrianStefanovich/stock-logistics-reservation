@@ -166,6 +166,21 @@ class TestStockSalesReservation(TransactionCase):
         r1.with_user(manager).user_id = self.seller2
         self.assertEqual(r1.user_id, self.seller2)
 
+    def test_seller_menus_in_inventory(self):
+        menus = self.env["ir.ui.menu"].with_user(self.seller)
+        visible_ids = menus._visible_menu_ids()
+        menu_list = self.env.ref(
+            "stock_reservation_sales.stock_sales_reservation_menu_list"
+        )
+        menu_overview = self.env.ref(
+            "stock_reservation_sales.stock_sales_reservation_menu_overview"
+        )
+        config = self.env.ref("stock.menu_stock_config_settings")
+        self.assertIn(self.env.ref("stock.menu_stock_root").id, visible_ids)
+        self.assertIn(menu_list.id, visible_ids)
+        self.assertNotIn(menu_overview.id, visible_ids)
+        self.assertNotIn(config.id, visible_ids)
+
     def test_form_defaults(self):
         with Form(self.env["stock.sales.reservation"]) as form:
             form.product_id = self.product

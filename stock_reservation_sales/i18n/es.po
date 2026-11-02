@@ -1,0 +1,437 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* stock_reservation_sales
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 20.0-20261015\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-02 19:18+0000\n"
+"PO-Revision-Date: 2026-11-02 19:18+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: stock_reservation_sales
+#: model:ir.model.fields.selection,name:stock_reservation_sales.selection__stock_sales_reservation__expiry_duration__1d
+msgid "1 day"
+msgstr "1 día"
+
+#. module: stock_reservation_sales
+#: model:ir.model.fields.selection,name:stock_reservation_sales.selection__stock_sales_reservation__expiry_duration__1h
+msgid "1 hour"
+msgstr "1 hora"
+
+#. module: stock_reservation_sales
+#: model:ir.model.fields.selection,name:stock_reservation_sales.selection__stock_sales_reservation__expiry_duration__1m
+msgid "1 month"
+msgstr "1 mes"
+
+#. module: stock_reservation_sales
+#: model:ir.model.fields.selection,name:stock_reservation_sales.selection__stock_sales_reservation__expiry_duration__1w
+msgid "1 week"
+msgstr "1 semana"
+
+#. module: stock_reservation_sales
+#: model:ir.model.fields.selection,name:stock_reservation_sales.selection__stock_sales_reservation__expiry_duration__2d
+msgid "2 days"
+msgstr "2 días"
+
+#. module: stock_reservation_sales
+#: model:ir.model.fields.selection,name:stock_reservation_sales.selection__stock_sales_reservation__expiry_duration__2w
+msgid "2 weeks"
+msgstr "2 semanas"
+
+#. module: stock_reservation_sales
+#: model:ir.model.fields.selection,name:stock_reservation_sales.selection__stock_sales_reservation__expiry_duration__3d
+msgid "3 days"
+msgstr "3 días"
+
+#. module: stock_reservation_sales
+#: model:ir.model.fields.selection,name:stock_reservation_sales.selection__stock_sales_reservation__expiry_duration__4h
+msgid "4 hours"
+msgstr "4 horas"
+
+#. module: stock_reservation_sales
+#: model:ir.model.fields,field_description:stock_reservation_sales.field_stock_sales_reservation__message_needaction
+msgid "Action Needed"
+msgstr "Acción necesaria"
+
+#. module: stock_reservation_sales
+#: model:res.groups,name:stock_reservation_sales.group_sales_reservation_manager
+msgid "Administrator"
+msgstr "Administrador"
+
+#. module: stock_reservation_sales
+#: model:ir.model.fields,field_description:stock_reservation_sales.field_stock_sales_reservation__message_attachment_count
+msgid "Attachment Count"
+msgstr "Nº de archivos adjuntos"
+
+#. module: stock_reservation_sales
+#: model:ir.model.fields,field_description:stock_reservation_sales.field_stock_sales_reservation__available_qty
+msgid "Available"
+msgstr "Disponible"
+
+#. module: stock_reservation_sales
+#: model:res.groups,comment:stock_reservation_sales.group_sales_reservation_user
+msgid ""
+"Can reserve stock without a sales order and manage their own reservations."
+msgstr ""
+"Puede reservar stock sin una orden de venta y gestionar sus propias "
+"reservas."
+
+#. module: stock_reservation_sales
+#: model:res.groups,comment:stock_reservation_sales.group_sales_reservation_manager
+msgid "Can see and manage the reservations of every salesperson."
+msgstr "Puede ver y gestionar las reservas de todos los vendedores."
+
+#. module: stock_reservation_sales
+#: model:ir.model.fields.selection,name:stock_reservation_sales.selection__stock_sales_reservation__state__cancelled
+msgid "Cancelled"
+msgstr "Cancelada"
+
+#. module: stock_reservation_sales
+#: model:ir.model.fields,field_description:stock_reservation_sales.field_stock_sales_reservation__company_id
+msgid "Company"
+msgstr "Compañía"
+
+#. module: stock_reservation_sales
+#: model:ir.model.fields,field_description:stock_reservation_sales.field_stock_sales_reservation__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: stock_reservation_sales
+#: model:ir.model.fields,field_description:stock_reservation_sales.field_stock_sales_reservation__create_date
+msgid "Created on"
+msgstr "Creado el"
+
+#. module: stock_reservation_sales
+#: model:ir.model.fields,field_description:stock_reservation_sales.field_stock_sales_reservation__partner_id
+msgid "Customer"
+msgstr "Cliente"
+
+#. module: stock_reservation_sales
+#: model:ir.model.fields,field_description:stock_reservation_sales.field_stock_sales_reservation__date_reserved
+msgid "Date Reserved"
+msgstr "Fecha de reserva"
+
+#. module: stock_reservation_sales
+#: model:ir.model.fields,help:stock_reservation_sales.field_stock_sales_reservation__uom_id
+msgid "Default unit of measure used for all stock operations."
+msgstr "Unidad de medida por defecto utilizada en todas las operaciones de stock."
+
+#. module: stock_reservation_sales
+#: model:ir.model.fields.selection,name:stock_reservation_sales.selection__stock_sales_reservation__state__done
+msgid "Delivered"
+msgstr "Entregada"
+
+#. module: stock_reservation_sales
+#: model:ir.model.fields,field_description:stock_reservation_sales.field_stock_sales_reservation__display_name
+msgid "Display Name"
+msgstr "Nombre mostrado"
+
+#. module: stock_reservation_sales
+#: model:ir.model.fields.selection,name:stock_reservation_sales.selection__stock_sales_reservation__state__draft
+#: model_terms:ir.ui.view,arch_db:stock_reservation_sales.stock_sales_reservation_view_search
+msgid "Draft"
+msgstr "Borrador"
+
+#. module: stock_reservation_sales
+#: model:ir.model.fields.selection,name:stock_reservation_sales.selection__stock_sales_reservation__state__expired
+#: model_terms:ir.ui.view,arch_db:stock_reservation_sales.stock_sales_reservation_view_search
+msgid "Expired"
+msgstr "Caducada"
+
+#. module: stock_reservation_sales
+#: model:ir.model.fields,field_description:stock_reservation_sales.field_stock_sales_reservation__expiry_duration
+msgid "Expires in"
+msgstr "Caduca en"
+
+#. module: stock_reservation_sales
+#: model:ir.model.fields,field_description:stock_reservation_sales.field_stock_sales_reservation__expiry_date
+msgid "Expiry Date"
+msgstr "Fecha de caducidad"
+
+#. module: stock_reservation_sales
+#: model:ir.model.fields,field_description:stock_reservation_sales.field_stock_sales_reservation__message_follower_ids
+msgid "Followers"
+msgstr "Seguidores"
+
+#. module: stock_reservation_sales
+#: model:ir.model.fields,field_description:stock_reservation_sales.field_stock_sales_reservation__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Seguidores (contactos)"
+
+#. module: stock_reservation_sales
+#: model:ir.model.fields,help:stock_reservation_sales.field_stock_sales_reservation__available_qty
+msgid "Free quantity of the product in the selected warehouse."
+msgstr "Cantidad libre del producto en el almacén seleccionado."
+
+#. module: stock_reservation_sales
+#: model:ir.model.fields,field_description:stock_reservation_sales.field_stock_sales_reservation__has_message
+msgid "Has Message"
+msgstr "Tiene mensaje"
+
+#. module: stock_reservation_sales
+#: model:ir.model.fields,field_description:stock_reservation_sales.field_stock_sales_reservation__id
+msgid "ID"
+msgstr "ID"
+
+#. module: stock_reservation_sales
+#: model:ir.model.fields,help:stock_reservation_sales.field_stock_sales_reservation__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "Si está marcado, hay nuevos mensajes que requieren su atención."
+
+#. module: stock_reservation_sales
+#: model:ir.model.fields,help:stock_reservation_sales.field_stock_sales_reservation__message_has_error
+#: model:ir.model.fields,help:stock_reservation_sales.field_stock_sales_reservation__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "Si está marcado, algunos mensajes tienen un error de entrega."
+
+#. module: stock_reservation_sales
+#: model:ir.model.fields,field_description:stock_reservation_sales.field_stock_sales_reservation__message_is_follower
+msgid "Is Follower"
+msgstr "Es seguidor"
+
+#. module: stock_reservation_sales
+#: model:ir.model.fields,field_description:stock_reservation_sales.field_stock_sales_reservation__write_uid
+msgid "Last Updated by"
+msgstr "Última actualización por"
+
+#. module: stock_reservation_sales
+#: model:ir.model.fields,field_description:stock_reservation_sales.field_stock_sales_reservation__write_date
+msgid "Last Updated on"
+msgstr "Última actualización el"
+
+#. module: stock_reservation_sales
+#: model:ir.module.module,summary:base.module_stock_reservation_sales
+msgid ""
+"Let salespeople reserve stock without a sales order, with automatic "
+"expiration"
+msgstr ""
+"Permite a los vendedores reservar stock sin una orden de venta, con "
+"caducidad automática"
+
+#. module: stock_reservation_sales
+#: model:ir.model.fields,field_description:stock_reservation_sales.field_stock_sales_reservation__message_has_error
+msgid "Message Delivery error"
+msgstr "Error de entrega del mensaje"
+
+#. module: stock_reservation_sales
+#: model:ir.model.fields,field_description:stock_reservation_sales.field_stock_sales_reservation__message_ids
+msgid "Messages"
+msgstr "Mensajes"
+
+#. module: stock_reservation_sales
+#: model_terms:ir.ui.view,arch_db:stock_reservation_sales.stock_sales_reservation_view_search
+msgid "My Reservations"
+msgstr "Mis reservas"
+
+#. module: stock_reservation_sales
+#: model:ir.model.fields,field_description:stock_reservation_sales.field_stock_sales_reservation__name
+msgid "Name"
+msgstr "Nombre"
+
+#. module: stock_reservation_sales
+#: model:res.groups.privilege,placeholder:stock_reservation_sales.res_groups_privilege_sales_reservation
+msgid "No"
+msgstr "No"
+
+#. module: stock_reservation_sales
+#. odoo-python
+#: code:addons/stock_reservation_sales/models/stock_sales_reservation.py:0
+msgid ""
+"Not enough stock: only %(available)s %(uom)s of %(product)s can be reserved."
+msgstr ""
+"Stock insuficiente: solo se pueden reservar %(available)s %(uom)s de "
+"%(product)s."
+
+#. module: stock_reservation_sales
+#: model:ir.model.fields,field_description:stock_reservation_sales.field_stock_sales_reservation__note
+msgid "Note"
+msgstr "Nota"
+
+#. module: stock_reservation_sales
+#: model:ir.model.fields,field_description:stock_reservation_sales.field_stock_sales_reservation__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Número de acciones"
+
+#. module: stock_reservation_sales
+#: model:ir.model.fields,field_description:stock_reservation_sales.field_stock_sales_reservation__message_has_error_counter
+msgid "Number of errors"
+msgstr "Número de errores"
+
+#. module: stock_reservation_sales
+#: model:ir.model.fields,help:stock_reservation_sales.field_stock_sales_reservation__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr "Número de mensajes que requieren una acción"
+
+#. module: stock_reservation_sales
+#: model:ir.model.fields,help:stock_reservation_sales.field_stock_sales_reservation__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Número de mensajes con error de entrega"
+
+#. module: stock_reservation_sales
+#. odoo-python
+#: code:addons/stock_reservation_sales/models/stock_sales_reservation.py:0
+msgid "Only draft or reserved reservations can be cancelled."
+msgstr "Solo se pueden cancelar las reservas en borrador o reservadas."
+
+#. module: stock_reservation_sales
+#. odoo-python
+#: code:addons/stock_reservation_sales/models/stock_sales_reservation.py:0
+msgid "Only draft reservations can be reserved."
+msgstr "Solo se pueden reservar las reservas en borrador."
+
+#. module: stock_reservation_sales
+#. odoo-python
+#: code:addons/stock_reservation_sales/models/stock_sales_reservation.py:0
+msgid "Only expired or cancelled reservations can be reset."
+msgstr "Solo se pueden volver a borrador las reservas caducadas o canceladas."
+
+#. module: stock_reservation_sales
+#: model:ir.model.fields,field_description:stock_reservation_sales.field_stock_sales_reservation__product_id
+#: model_terms:ir.ui.view,arch_db:stock_reservation_sales.stock_sales_reservation_view_search
+msgid "Product"
+msgstr "Producto"
+
+#. module: stock_reservation_sales
+#: model:ir.model.fields,field_description:stock_reservation_sales.field_stock_sales_reservation__product_qty
+msgid "Quantity"
+msgstr "Cantidad"
+
+#. module: stock_reservation_sales
+#: model_terms:ir.ui.view,arch_db:stock_reservation_sales.stock_sales_reservation_view_form
+msgid "Reason for the reservation..."
+msgstr "Motivo de la reserva..."
+
+#. module: stock_reservation_sales
+#: model_terms:ir.ui.view,arch_db:stock_reservation_sales.stock_sales_reservation_view_form
+msgid "Release"
+msgstr "Liberar"
+
+#. module: stock_reservation_sales
+#: model_terms:ir.ui.view,arch_db:stock_reservation_sales.stock_sales_reservation_view_form
+msgid "Reserve"
+msgstr "Reservar"
+
+#. module: stock_reservation_sales
+#: model:ir.model.fields.selection,name:stock_reservation_sales.selection__stock_sales_reservation__state__reserved
+#: model_terms:ir.ui.view,arch_db:stock_reservation_sales.stock_sales_reservation_view_search
+msgid "Reserved"
+msgstr "Reservada"
+
+#. module: stock_reservation_sales
+#: model:ir.actions.act_window,name:stock_reservation_sales.stock_sales_reservation_overview_action
+#: model:ir.ui.menu,name:stock_reservation_sales.stock_sales_reservation_menu_overview
+msgid "Reserved Stock by Salesperson"
+msgstr "Stock reservado por vendedor"
+
+#. module: stock_reservation_sales
+#: model:ir.model.fields,field_description:stock_reservation_sales.field_stock_sales_reservation__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "Error de entrega del SMS"
+
+#. module: stock_reservation_sales
+#: model:ir.ui.menu,name:stock_reservation_sales.stock_sales_reservation_menu_list
+msgid "Sales Reservations"
+msgstr "Reservas de ventas"
+
+#. module: stock_reservation_sales
+#: model:ir.actions.server,name:stock_reservation_sales.ir_cron_expire_sales_reservations_ir_actions_server
+msgid "Sales Reservations: release expired"
+msgstr "Reservas de ventas: liberar caducadas"
+
+#. module: stock_reservation_sales
+#: model:ir.model,name:stock_reservation_sales.model_stock_sales_reservation
+msgid "Sales Stock Reservation"
+msgstr "Reserva de stock de ventas"
+
+#. module: stock_reservation_sales
+#: model:res.groups.privilege,name:stock_reservation_sales.res_groups_privilege_sales_reservation
+msgid "Sales Stock Reservations"
+msgstr "Reservas de stock de ventas"
+
+#. module: stock_reservation_sales
+#: model:ir.model.fields,field_description:stock_reservation_sales.field_stock_sales_reservation__user_id
+#: model_terms:ir.ui.view,arch_db:stock_reservation_sales.stock_sales_reservation_view_search
+msgid "Salesperson"
+msgstr "Vendedor"
+
+#. module: stock_reservation_sales
+#: model_terms:ir.ui.view,arch_db:stock_reservation_sales.stock_sales_reservation_view_form
+msgid "Set to Draft"
+msgstr "Volver a borrador"
+
+#. module: stock_reservation_sales
+#: model:ir.model.fields,field_description:stock_reservation_sales.field_stock_sales_reservation__state
+msgid "State"
+msgstr "Estado"
+
+#. module: stock_reservation_sales
+#: model_terms:ir.ui.view,arch_db:stock_reservation_sales.stock_sales_reservation_view_search
+msgid "Status"
+msgstr "Estado"
+
+#. module: stock_reservation_sales
+#: model:ir.module.module,shortdesc:base.module_stock_reservation_sales
+msgid "Stock - Sales Reservations"
+msgstr "Stock - Reservas de ventas"
+
+#. module: stock_reservation_sales
+#: model:ir.actions.act_window,name:stock_reservation_sales.stock_sales_reservation_action
+msgid "Stock Reservations"
+msgstr "Reservas de stock"
+
+#. module: stock_reservation_sales
+#. odoo-python
+#: code:addons/stock_reservation_sales/models/stock_sales_reservation.py:0
+msgid "The quantity to reserve must be greater than zero."
+msgstr "La cantidad a reservar debe ser mayor que cero."
+
+#. module: stock_reservation_sales
+#. odoo-python
+#: code:addons/stock_reservation_sales/models/stock_sales_reservation.py:0
+msgid "The reservation has expired and the stock was released."
+msgstr "La reserva ha caducado y el stock ha sido liberado."
+
+#. module: stock_reservation_sales
+#: model_terms:ir.ui.view,arch_db:stock_reservation_sales.stock_sales_reservation_view_form
+msgid "The reserved stock will be released. Continue?"
+msgstr "El stock reservado será liberado. ¿Desea continuar?"
+
+#. module: stock_reservation_sales
+#: model:ir.model.fields,field_description:stock_reservation_sales.field_stock_sales_reservation__picking_id
+msgid "Transfer"
+msgstr "Transferencia"
+
+#. module: stock_reservation_sales
+#: model:ir.model.fields,field_description:stock_reservation_sales.field_stock_sales_reservation__uom_id
+msgid "Unit"
+msgstr "Unidad"
+
+#. module: stock_reservation_sales
+#: model:res.groups,name:stock_reservation_sales.group_sales_reservation_user
+msgid "User: Own Reservations"
+msgstr "Usuario: solo sus reservas"
+
+#. module: stock_reservation_sales
+#: model:ir.model.fields,field_description:stock_reservation_sales.field_stock_sales_reservation__warehouse_id
+msgid "Warehouse"
+msgstr "Almacén"
+
+#. module: stock_reservation_sales
+#. odoo-python
+#: code:addons/stock_reservation_sales/models/stock_sales_reservation.py:0
+msgid "Warehouse %s has no internal transfer operation type."
+msgstr "El almacén %s no tiene un tipo de operación de transferencia interna."
+
+#. module: stock_reservation_sales
+#. odoo-python
+#: code:addons/stock_reservation_sales/models/stock_sales_reservation.py:0
+msgid "You cannot delete an active reservation. Cancel it first."
+msgstr "No puede eliminar una reserva activa. Cancélela primero."

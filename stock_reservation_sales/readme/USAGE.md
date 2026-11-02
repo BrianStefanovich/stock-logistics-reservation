@@ -1,4 +1,4 @@
-1.  Go to *Stock Reservations* and click *New*.
+1.  Go to *Inventory > Operations > Sales Reservations* and click *New*.
 2.  Choose the product, quantity, optionally the customer, and the
     *Expires in* duration.
 3.  Click *Reserve*. The stock is reserved until the expiration date.
